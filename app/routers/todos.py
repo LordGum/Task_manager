@@ -2,16 +2,10 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from typing import Optional, List
 from app import models, schemas
+from app.database import get_db
 from app.database import SessionLocal
 
 router = APIRouter(prefix="/todos", tags=["todos"])
-
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
 
 
 @router.post("/", response_model=schemas.TodoResponse)
