@@ -1,5 +1,36 @@
-в терминале запустить \
-py -m pytest tests/ -v --cov=app --cov-report=term-missing \
+# Todo App with Docker
+Простое Todo-приложение на FastAPI + MySQL + Docker.
 
-<img width="1018" height="490" alt="image" src="https://github.com/user-attachments/assets/31888a13-9497-4705-aa30-06ac67d0dead" />
+
+## Запуск
+docker-compose up -d
+
+
+## API
+Метод	     URL	             Описание
+POST	     /todos/	         Создать задачу
+GET	         /todos/	         Получить все задачи
+GET	         /todos/{id}	     Получить задачу по ID
+PUT	         /todos/{id}	     Обновить задачу
+DELETE	     /todos/{id}	     Удалить задачу
+
+
+## Примеры
+#### Создать задачу
+curl -X POST http://localhost:8000/todos/ \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Купить молоко","description":"сходить в магазин"}'
+
+#### Получить все задачи
+curl http://localhost:8000/todos/
+
+#### Обновить статус
+curl -X PUT http://localhost:8000/todos/1 \
+  -H "Content-Type: application/json" \
+  -d '{"status":"готово"}'
+
+#### Удалить задачу
+curl -X DELETE http://localhost:8000/todos/1
+
+
 
