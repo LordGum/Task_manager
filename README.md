@@ -17,17 +17,13 @@ DELETE	     /todos/{id}	     Удалить задачу
 
 ## Примеры
 #### Создать задачу
-curl -X POST http://localhost:8000/todos/ \
-  -H "Content-Type: application/json" \
-  -d '{"title":"Купить молоко","description":"сходить в магазин"}'
+curl -X POST http://localhost:8000/todos/ -H "Content-Type: application/json" -d '{"title":"Купить молоко","description":"сходить в магазин"}'
 
 #### Получить все задачи
 curl http://localhost:8000/todos/
 
 #### Обновить статус
-curl -X PUT http://localhost:8000/todos/1 \
-  -H "Content-Type: application/json" \
-  -d '{"status":"готово"}'
+curl -X PUT http://localhost:8000/todos/1 -H "Content-Type: application/json" -d '{"status":"готово"}'
 
 #### Удалить задачу
 curl -X DELETE http://localhost:8000/todos/1
