@@ -7,12 +7,12 @@ docker-compose up -d
 
 
 ## API
-Метод	     URL	             Описание
-POST	     /todos/	         Создать задачу
-GET	         /todos/	         Получить все задачи
-GET	         /todos/{id}	     Получить задачу по ID
-PUT	         /todos/{id}	     Обновить задачу
-DELETE	     /todos/{id}	     Удалить задачу
+Метод	       URL	             Описание \
+POST	       /todos/	         Создать задачу \
+GET	         /todos/	         Получить все задачи \
+GET	         /todos/{id}	     Получить задачу по ID \
+PUT	         /todos/{id}	     Обновить задачу \
+DELETE	     /todos/{id}	     Удалить задачу \
 
 
 ## Примеры
